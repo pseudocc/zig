@@ -8059,6 +8059,26 @@ pub const ifinfomsg = extern struct {
     change: c_uint,
 };
 
+pub const ifaddrmsg = extern struct {
+    family: u8,
+    prefix_len: u8,
+    flags: u8,
+    scope: u8,
+    index: u32,
+};
+
+pub const rtmsg = extern struct {
+    family: u8,
+    dst_len: u8,
+    src_len: u8,
+    tos: u8,
+    table: u8,
+    protocol: u8,
+    scope: u8,
+    type: u8,
+    flags: u32,
+};
+
 pub const rtattr = extern struct {
     /// Length of option
     len: c_ushort,
